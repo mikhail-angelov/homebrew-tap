@@ -1,6 +1,6 @@
 cask "vadic" do
-  version "1.0.0"
-  sha256 "b9c227aeb5d7d9ee1949390e64a96bb7bb092fae830a9b6a86b6a69726da02a0"
+  version "1.1.0"
+  sha256 "1a60f97363aa627143eef9fe54bf369d7b0abdf6b443d78a72a10117c7b26668"
 
   url "https://github.com/mikhail-angelov/vadic/releases/download/v#{version}/Vadic-#{version}-macos-arm64.zip"
   name "Vadic"
