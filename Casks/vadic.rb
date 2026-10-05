@@ -1,6 +1,6 @@
 cask "vadic" do
-  version "1.1.1"
-  sha256 "51ba315a95860ff99af720fd46c938f57cbba37ed5753eea5715524c465b14cd"
+  version "1.1.2"
+  sha256 "0221c5984974459562fb65dc94b55f3bdd53a9eadafce646ba013e1cfb7c919a"
 
   url "https://github.com/mikhail-angelov/vadic/releases/download/v#{version}/Vadic-#{version}-macos-arm64.zip"
   name "Vadic"
@@ -22,10 +22,16 @@ cask "vadic" do
         writable_paths: ["Vadic.app"]
   end
 
-  uninstall quit: "dev.vadic.Vadic"
+  # No "uninstall quit": Vadic watches its bundle and restarts itself after an upgrade, quits after an uninstall.
 
   zap trash: [
     "~/Library/Application Support/Vadic",
     "~/Library/Preferences/dev.vadic.Vadic.plist",
   ]
+
+  caveats <<~EOS
+    Start Vadic once to finish the setup:
+      open -a Vadic
+    It then adds itself to Login Items and starts with macOS; upgrades restart it automatically.
+  EOS
 end
