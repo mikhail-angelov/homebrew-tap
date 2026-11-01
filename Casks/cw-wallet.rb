@@ -1,6 +1,6 @@
 cask "cw-wallet" do
-  version "0.1.1"
-  sha256 "632b6e7e57de077653f27086f53828aecdac97c45939b460055250bc8b3614d0"
+  version "0.2.0"
+  sha256 "d9ae10d0e43d4467c8239ff920fa27d94eeaf7f03a380fdc27586c426048a09f"
 
   url "https://github.com/mikhail-angelov/cw/releases/download/v#{version}/CW-Wallet-#{version}-macos-universal.zip"
   name "CW Wallet"
